@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.convention.package.locators" value="actions,struts2"/>
+	<package name="default" extends="struts-default" >
+	<!--登录-->
+		<action name="login" class="com.markey.action.loginAction" method="login"> 
+		<result name="success">/funtion.jsp</result>
+		<result name="error">/fail.jsp</result>
+		</action>
+	<!--取钱-->
+		<action name="getMoney" class="com.markey.action.getAction" method="getMoney"> 
+		<result name="success">/getMoneySuccess.jsp</result>
+		<result name="noEnough">/noEnough.jsp</result>
+		<result name="error">/fail.jsp</result>
+		</action>
+	<!--存钱-->
+		<action name="putMoney" class="com.markey.action.putAction" method="putMoney"> 
+		<result name="success">/putMoneySuccess.jsp</result>
+		<result name="error">/fail.jsp</result>
+		</action>
+	<!--查询-->
+		<action name="check" class="com.markey.action.checkAction" method="check"> 
+		<result name="success">/check.jsp</result>
+		<result name="error">/fail.jsp</result>
+		</action>
+	<!--修改密码-->
+		<action name="changePassword" class="com.markey.action.changePasswordAction" method="changePassword"> 
+		<result name="success">/changePasswordSuccess.jsp</result>
+		<result name="error">/fail.jsp</result>
+		</action>
+	<!--行内转账-->
+		<action name="hnTransfer" class="com.markey.action.transferAction" method="hnTransfer"> 
+		<result name="success">/transferSuccess.jsp</result>
+		<result name="noEnough">/noEnough.jsp</result>
+		<result name="error">/fail.jsp</result>
+		</action>
+	<!--跨行转账-->
+		<action name="khTransfer" class="com.markey.action.transferAction" method="khTransfer"> 
+		<result name="success">/transferSuccess.jsp</result>
+		<result name="noEnough">/noEnough.jsp</result>
+		<result name="error">/fail.jsp</result>
+		</action>
+	</package>
+
+</struts>    
